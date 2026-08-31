@@ -1,0 +1,16 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.Write("Digite o valor do produto: ");
+        double num1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite o desconto: ");
+        double num2 = double.Parse(Console.ReadLine());
+
+        double valorf = (num1 * num2/100);
+        Console.Write($"O valor do produto com desconto e {valorf}");
+    }
+}
