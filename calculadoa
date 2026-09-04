@@ -1,0 +1,36 @@
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.Write ("Digite o numero: ");
+        double num1 = int.Parse(Console.ReadLine());
+        Console.Write ("Digite o outro numero: ");
+        double num2 = int.Parse(Console.ReadLine());
+        Console.Write ("Digite a equacao: ");
+        string equacao = Convert.ToString(Console.ReadLine());
+        if (equacao == "+")
+        {
+        double resultado = (num1 + num2);
+            Console.Write($"O resultado da conta e: {resultado} ");
+        }
+        else if (equacao == "-")
+        {
+        double resultado = (num1 - num2);
+            Console.Write($"O resultado da conta e: {resultado} ");
+        }
+         else if (equacao == "*")
+        {
+        double resultado = (num1 * num2);
+            Console.Write($"O resultado da conta e: {resultado} ");
+        }
+         else if (equacao == "/")
+        {
+        double resultado = (num1 / num2);
+            Console.Write($"O resultado da conta e: {resultado} ");
+        }
+      
+        }
+        
+}
