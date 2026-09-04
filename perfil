@@ -1,0 +1,54 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("===================");
+        Console.WriteLine("  DADOS DO ALUNO");
+        Console.WriteLine("===================");
+        Console.WriteLine("");
+        Console.Write("Digite seu nome: ");
+        string nome = Convert.ToString(Console.ReadLine());
+        Console.Write("Digite sua idade: ");
+        int idade = int.Parse(Console.ReadLine());
+        Console.Write("Digite seu Curso: ");
+        string curso = Convert.ToString(Console.ReadLine());
+        double nota1, nota2;
+
+        Console.Write("Digite a primeira nota (0 a 10): ");
+        nota1 = double.Parse(Console.ReadLine());
+
+        while (nota1 < 0 || nota1 > 10)
+        {
+            Console.WriteLine("Erro! A nota deve estar entre 0 e 10.");
+            Console.Write("Digite a primeira nota novamente: ");
+            nota1 = double.Parse(Console.ReadLine());
+        }
+
+        Console.Write("Digite a segunda nota (0 a 10): ");
+        nota2 = double.Parse(Console.ReadLine());
+
+        while (nota2 < 0 || nota2 > 10)
+        {
+            Console.WriteLine("Erro! A nota deve estar entre 0 e 10.");
+            Console.Write("Digite a segunda nota novamente: ");
+            nota2 = double.Parse(Console.ReadLine());
+        }
+
+        double media = (nota1 + nota2) / 2;
+
+        Console.WriteLine();
+        Console.WriteLine("=====================");
+        Console.WriteLine("  CADASTRO DO ALUNO");
+        Console.WriteLine("=====================");
+        Console.WriteLine("");
+        Console.WriteLine($"Nome: {nome}");
+        Console.WriteLine($"Idade: {idade}");
+        Console.WriteLine($"Curso: {curso}");
+        Console.WriteLine($"Nota 1: {nota1}");
+        Console.WriteLine($"Nota 2: {nota2}");
+        Console.WriteLine($"Media: {media:F2}");
+
+    }
+}
